@@ -1,0 +1,11 @@
+# ºöÂÔµÄÎÄ¼ş
+*.pyc*
+*sqlite3
+*my_datas.py
+*.idea
+*.svg
+*.jpg
+*.JPG
+*.json
+*txt
+*zip

@@ -1,0 +1,28 @@
+﻿{% extends "winter_web/base.html" %}
+{% load static %}
+{% block header %}
+<div class="jumbotron" style="background-color:#e3c6f1;">
+以下是当前的版块列表,您可以在此查看版块内容
+</div>
+{% endblock header %}
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-heading " style="background-color:#ceebf3;" >
+    <h4>
+      <ul>
+        {% for theme in themes %}
+          <li>
+          <a href="{% url 'theme' theme.id %}">{{theme}}</a>
+          </li>
+        {% empty %}
+          <li>没有更多的版块了</li>
+        {% endfor %}
+      </ul>
+        {% if request.user.id == 1 %}
+          <a href="{% url 'new_theme' %}">点击此处建立新板块</a>
+        {% endif %}
+    </h4>
+  </div>
+  <img src="{% static 'winter_web/themes.jpg' %}" class="img-thumbnail" alt="themes"/>
+</div>
+{% endblock content %}

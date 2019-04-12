@@ -1,0 +1,22 @@
+﻿{% extends "winter_web/base.html" %}
+{% load static %}
+{% block header %}
+<p>如果浏览器对原网页进行了重新排版,会导致网页无法跳转,请点击原网页进行访问</p>
+<div class="jumbotron text-center" style="background-color:#e3c6f1;">
+    <p>你好,这里是橘子的网站</p>
+    <p>欢迎来到冬日之家</p>
+</div>
+{% endblock header %}
+{% block content %}
+<div class="jumbotron text-center" style="background-color:#ceebf3;" >
+    <p><a href="{% url 'themes' %}">主题板块</a></p>
+    <p><a href="{% url 'datas' %}">数据可视化</a></p>
+    {% if user.is_authenticated %}
+      <p>{{user.username}},请随意发挥你的想象力来使用这个网站吧!</p>
+    {% else %}
+      <p><a href="{% url 'register' %}">来注册一个账户吧!</a></p>
+      <p><a href="{% url 'login' %}">已有账户?点此登录</a></p>
+    {% endif %}
+<img src="{% static 'winter_web/000.jpg' %}" class="img-thumbnail" alt="index"/>
+</div>
+{% endblock content %}

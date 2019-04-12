@@ -1,0 +1,35 @@
+﻿{% extends 'winter_web/base.html' %}
+{% load comments %}
+{% load bootstrap3 %}
+{% block header %}
+<h4>
+  <p>主题:<a href="{% url 'topic' topic.id %}">{{topic}}</a></p>
+    <p>主题内容:</p>
+</h4>
+{% endblock header %}
+{% block content %}
+<div class="panel panle-default">
+    <div class="panel-heading">
+        <h4>
+          <ul>
+          {% for entry in entries %}
+            <div class="panel-body">
+            <li><p>{{ entry.text|linebreaks }}</p></li>
+             <small>
+                 <p><abbr title="时间:{{ entry.date_added|date:'Y M d ,H:i '}}">作者:{{ entry.owner }}</abbr></p>
+            {% if request.user == entry.owner %}
+                 <p><a href="{% url 'edit_entry' entry.id %}">编辑</a></p>
+            {% endif %}
+              </small>
+            </div>
+          {% empty %}
+            <li>
+            当前主题下没有内容
+            </li>
+          {% endfor %}
+          </ul>
+            <p><a href="{% url 'new_entry' topic.id %}"  >点击此处回复主题</a></p>
+        </h4>
+    </div>
+</div>
+{% endblock content %}

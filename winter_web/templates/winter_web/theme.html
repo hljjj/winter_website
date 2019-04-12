@@ -1,0 +1,31 @@
+﻿{% extends 'winter_web/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% block header %}
+<div class="jumbotron" style="background-color:#e3c6f1;">
+  <p>这里是版块主题列表</p>
+  <p>版块:<a href="{% url 'theme' theme.id %}">{{theme}}</a></p>
+  <p>主题:</p>
+</div>
+{% endblock header %}
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-heading" style="background-color:#ceebf3;" >
+    <h4>
+      <ul>
+      {% for topic in topics %}
+        <abbr title="{{ topic.date_added|date:'Y M d ,H:i '}}  作者:{{ topic.owner }}" class="initialism">
+          <li><p><a href="{% url 'topic' topic.id %}">{{topic}}</a></p></li>
+        </abbr>
+      {% empty %}
+        <li>
+        当前版块下没有主题
+        </li>
+      {% endfor %}
+      </ul>
+      <a href="{% url 'new_topic' theme.id %}">点击此处建立新主题</a>
+    </h4>
+  </div>
+</div>
+<img src="{% static 'winter_web/department.jpg' %}" class="img-thumbnail" alt="department"/>
+{% endblock content %}

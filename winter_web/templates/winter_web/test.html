@@ -1,0 +1,53 @@
+{% extends "winter_web/base.html" %}
+{% load static %}
+{% load bootstrap3 %}
+{% block header %}
+<h4>数据分析项目-拉勾网'数据分析'岗位-分布特征可视化</h4>
+{% endblock header %}
+{% block content %}
+<p>数据来源:拉勾网全国36个主要城市的"数据分析"职位数据,共计1832条,数据获取时间为2019年3月</p>
+<div class="panel-group" id = 'accordion'>
+    <div class ='panel panel-default'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                     <p>城市分布</p>
+                </a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                     <p>薪资水平</p>
+                </a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    <p>经验要求</p>
+                </a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    <p>学历要求</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/城市.svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/城市分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/薪资.svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/薪资分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/经验.svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/经验分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/学历.svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/学历分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
