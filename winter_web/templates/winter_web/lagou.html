@@ -26,6 +26,23 @@
         <div class="panel panel-heading">
             <h4>
                 <div class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                         <p>行业分布</p>
+                    </a>
+                </div>
+            </h4>
+        </div>
+        <div id="collapse10" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/行业.svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/行业分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel panel-heading">
+            <h4>
+                <div class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
                          <p>薪资水平</p>
                     </a>
@@ -73,6 +90,103 @@
             </div>
         </div>
     </div>
+    <div class ='panel panel-default'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                   <p>关键词分布</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/关键词前20.svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/关键词分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/keyword.svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
+    <div class ='panel panel-default'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                   <p>城市-薪资分布</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/北京城市-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/上海城市-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/深圳城市-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/广州城市-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/杭州城市-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/其他城市-薪资分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
+    <div class ='panel panel-default'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                   <p>经验-薪资分布</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/应届毕业生经验-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/不限经验-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/1年以下经验-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/1-3年经验-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/3-5年经验-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/5-10年经验-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/10年以上经验-薪资分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
+    <div class ='panel panel-default'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                   <p>学历-薪资分布</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse8" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/博士学历-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/硕士学历-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/本科学历-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/大专学历-薪资分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/不限学历-薪资分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
+    <div class ='panel panel-default'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                   <p>城市人才需求等级</p>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse9" class="panel-collapse collapse">
+            <div class="panel-body">
+                <object type='image/svg+xml' data="{% static 'winter_web/北京城市-学历分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/北京城市-经验分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/上海城市-学历分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/上海城市-经验分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/深圳城市-学历分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/深圳城市-经验分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/广州城市-学历分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/广州城市-经验分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/杭州城市-学历分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/杭州城市-经验分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/其他城市-学历分布(%).svg'%}" height="300"></object>
+                <object type='image/svg+xml' data="{% static 'winter_web/其他城市-经验分布(%).svg'%}" height="300"></object>
+            </div>
+        </div>
+    </div>
 </div>
-
 {% endblock%}

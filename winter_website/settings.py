@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'django_comments',
     'django.contrib.sites',
     'rest_framework',
+    'MySQLdb'   # mysqlclient
+
 ]
 
 MIDDLEWARE = [
