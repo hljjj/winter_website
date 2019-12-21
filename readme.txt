@@ -1,2 +1,2 @@
-����ĿΪʹ��python-django�����վ,Դ����ȫ���ϴ�
-��ַ http://230173i14o.51mypc.cn/
+该项目为使用python-django搭建的网站,源码已全部上传
+没空管理,该网站已关闭
